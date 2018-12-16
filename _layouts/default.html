@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,6 @@
 <body>
 
   {% include navigation.html %}
-
-  {% if page.profile %}
-      {% include profile.html %}
-  {% endif %}
 
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
     {{ content }}
@@ -37,6 +34,7 @@
     ga('create', '{{ site.google_analytics }}', 'auto');
     ga('send', 'pageview');
   </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.7.1/gist-embed.min.js"></script>
 </body>
 </html>
 

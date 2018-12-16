@@ -642,3 +642,14 @@ h2.month {
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
 }
+
+/*inline code*/
+.highlighter-rouge {
+	padding: 1px 3px;
+	font-family: Inconsolata, monospace, sans-serif;
+	font-size: 0.95em;
+	white-space: pre-wrap;
+	border: #E3EDF3 1px solid;
+	background: #F7FAFB;
+	border-radius: 2px;
+}
