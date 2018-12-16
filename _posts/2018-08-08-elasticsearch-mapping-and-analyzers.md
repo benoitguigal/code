@@ -5,7 +5,7 @@ date:   2018-08-08 00:00:00
 
 *Elasticsearch is a highly scalable open-source full-text search and analytics engine. It allows you to store, search, and analyze big volumes of data quickly and in near real time. It is generally used as the underlying engine/technology that powers applications that have complex search features and requirements.*
 
-![logo](/assets/images/elasticsearch/logo.png)
+![logo]({{site.url}}/assets/images/elasticsearch/logo.png)
 
 Elasticsearch is reputed to be *schema-less*, which means you can quickly insert documents to an index without specifying a schema beforehand. This differs from traditional relational databases where you have to explicitly specify tables, fields and fields types.
 
@@ -52,7 +52,7 @@ Hourah it worked !
 
 > You know more about your data than Elasticsearch does
 
-![standard-analyzer](/assets/images/elasticsearch/standard-analyzer.png)
+![standard-analyzer]({{site.url}}/assets/images/elasticsearch/standard-analyzer.png)
 
 We can inspect how the analyser works thanks to the `_analyse` API.
 
@@ -65,7 +65,7 @@ Let’s verify a search for the word “*passionate*” matches :
 
 This is great but we would like Elasticsearch to be tolerant to the different inflected forms of a word. In our example I would like my document to match if I search for the word passion. This can be achieved with a [language analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html) that will stem the tokens. This process is called [lemmatization](https://en.wikipedia.org/wiki/Lemmatisation) and will group together all inflected forms of a word. Ex: passionate → passion, foxes → fox, jumped → jump, etc.
 
-![english-analyzer](/assets/images/elasticsearch/english-analyzer.png)
+![english-analyzer]({{site.url}}/assets/images/elasticsearch/english-analyzer.png)
 
 Let’s remove the index, apply the *english analyzer* to our description field, and reindex our document.
 

@@ -7,7 +7,7 @@ JanusGraph is a scalable [graph database](https://en.wikipedia.org/wiki/Graph_da
 
 The easiest way to connect to JanusGraph is through the [Gremlin console](http://tinkerpop.apache.org/docs/current/tutorials/the-gremlin-console/). It is a great tool to experiment but what if you want to develop an application in Python that will execute queries against JanusGraph in support of the application front-end ?
 
-![stack](/assets/images/janusgraph-and-python/stack.png)
+![stack]({{site.url}}/assets/images/janusgraph-and-python/stack.png)
 
 Python is not a JVM-based language, hence we are not able to embed JanusGraph calls directly from a Python program. Instead, JanusGraph packages a long running server process that, when started, allows a remote client or logic running in a separate program to make JanusGraph calls. This long running server process is called [JanusGraph Server](https://docs.janusgraph.org/0.2.0/server.html). Moreover TinkerPop3 provides [gremlin-python](https://github.com/apache/tinkerpop/tree/master/gremlin-python), a Gremlin language variant that allows developer to express Gremlin graph traversal natively and send requests to the server.
 
@@ -79,7 +79,7 @@ gremlin> g.V(saturn).in('father').in('father').values('name')
 
 ## Connecting with Python
 
-![gremlin-python](/assets/images/janusgraph-and-python/gremlin-python.png)
+![gremlin-python]({{site.url}}/assets/images/janusgraph-and-python/gremlin-python.png)
 
 In order to connect to the server from Python we need to configure the gremlin-server for Python and to install the `gremlin-python` package.
 
@@ -113,7 +113,7 @@ There are some slight language variations compared to using Gremlin in the Greml
 <br/>
 How does this magic happen ? Under the hood, a traversal in native Python is translated to Gremlin `Bytecode`, sent over the network and ultimately compiled to a `Traversal` by JanusGraph
 
-![language-variant](/assets/images/janusgraph-and-python/language-variant.png)
+![language-variant]({{site.url}}/assets/images/janusgraph-and-python/language-variant.png)
 
 For details about Gremlin language variants, please follow the [tutorial](http://tinkerpop.apache.org/docs/current/tutorials/gremlin-language-variants/) in the TinkerPop documentation.
 
